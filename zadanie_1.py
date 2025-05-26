@@ -21,3 +21,20 @@ for p in permutacja(ciag):
     print(p)
 '''
 print("Permutacje ciągu  '{}':".format(ciag), permutacja(ciag))
+
+
+#ZAPIS BINARNY LICZBY CALKOWITEJ
+
+def zapis_binarny(n):
+    if n < 0:
+        return '-' + zapis_binarny(-n)
+    if n < 2:
+        return str(n)
+    return zapis_binarny(n // 2) + str(n % 2)
+
+
+liczba = int(input("Podaj liczbe calkowita (w zapisie dziesietnym):    "))
+print("Zapis binarny liczby {}: {}".format(liczba, zapis_binarny(liczba)))
+
+
+#
